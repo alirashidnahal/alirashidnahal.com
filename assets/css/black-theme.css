@@ -1,0 +1,76 @@
+/* -----------------------------------------------------------------------------
+
+File:			CSS Theme Background
+Version:        1.0
+Author:			Hesham Shawky
+
+-------------------------------------------------------------------------------- */
+
+body {
+    color: #fff;
+    background: #222
+}
+
+a,
+.pagination>li>a,
+.single-post.post:hover .meta a,
+.main-blog > h3 {
+    color: #fff;
+}
+
+.profile .container {
+    background: rgba(34, 34, 34, 0.9);
+}
+
+.socail-links ul li a ,
+.portfolio-list-filter ul li.active h5,
+.portfolio-item-links ul li a,
+.post:hover .share-post a,
+.share-post .socail-links ul li a,
+.nav-open,
+.nav-close,
+.contact-form input[type="submit"],
+.nav-list ul li.active a,
+.nav-list ul li.active a:hover,
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover,
+.more-post a,
+.more-post a:hover,
+.comments input[type="submit"],
+.pagination>.active>a,
+.classy-btn,
+.pricing-table li > .fa {
+    color: #222;
+}
+
+.portfolio-item,
+.post,
+.portfolio-list-filter ul li h5,
+.progress,
+.breadcrumb,
+.comments .comment:hover,
+blockquote,
+.nav>li>a:hover,
+.social-media a,
+.open-social,
+.pricing-table,
+.faqs .question .answer {
+    background: #333;
+}
+
+.single-post .post-content,
+.loading-page,
+.profile h4,
+.classy-btn:hover{
+    background: #222
+}
+
+.nav-list ul li {
+    border-color: #222;
+}
+
+.question {
+    background-color: #2d2d2d;
+}
