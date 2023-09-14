@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/error.gif" class="img-fluid">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/error.gif" class="img-fluid" alt="404 error">
                     </div>
                     <div class="col-md-5">
                         <div class="d-flex justify-content-center">

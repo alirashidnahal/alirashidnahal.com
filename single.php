@@ -55,7 +55,7 @@
                                         </li>
                                         <li class="date">
                                             <i class="fa fa-calendar"></i>
-		                                    <?php the_time('d F Y') ?>
+		                                    <?php the_time(get_option( 'date_format' )) ?>
                                         </li>
                                         <li class="postviews">
                                             <i class="fa fa-eye"></i>
@@ -66,19 +66,19 @@
                                         <li class="pull-left">
                                             <ul class="list-unstyled list-inline">
                                                 <li>
-                                                    <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on facebook" href="https://www.facebook.com/share.php?u=<?php the_permalink(); ?>&title=<?php echo get_post_meta($post->ID, 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                                                    <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on facebook" href="https://www.facebook.com/share.php?u=<?php the_permalink(); ?>&title=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on twitter" href="https://twitter.com/intent/tweet?status=<?php echo get_post_meta($post->ID, 'h1', true); ?>+<?php the_permalink(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                                                    <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on twitter" href="https://twitter.com/intent/tweet?status=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>+<?php the_permalink(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                                 <li>
                                                     <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on whatsapp" href="https://api.whatsapp.com/send?text=<?php the_permalink(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-whatsapp"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php echo get_post_meta($post->ID, 'h1', true); ?>&source=علی رشیدنهال" rel="nofollow noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                                                    <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>&source=علی رشیدنهال" rel="nofollow noopener noreferrer"><i class="fa fa-linkedin"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on telegram" href="https://telegram.me/share/url?url=<?php the_permalink(); ?>&text=<?php echo get_post_meta($post->ID, 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-telegram"></i></a>
+                                                    <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on telegram" href="https://telegram.me/share/url?url=<?php the_permalink(); ?>&text=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-telegram"></i></a>
                                                 </li>
                                                 <li>
                                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php the_post_thumbnail_url(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-pinterest-p"></i></a>
@@ -90,7 +90,7 @@
                                 </div>
 
                                 <header>
-                                    <h1><a href="<?php the_permalink() ?>"><?php echo get_post_meta($post->ID, 'h1', true); ?></a></h1><!-- // post-title -->
+                                    <h1><a href="<?php the_permalink() ?>"><?php echo get_post_meta(get_the_ID(), 'h1', true); ?></a></h1><!-- // post-title -->
                                 </header>
                                 <article id="post-<?php the_ID(); ?>">
                                     <div class="content"><?php echo the_content(); ?></div>

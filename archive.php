@@ -64,19 +64,19 @@
                                                     <div class="socail-links">
                                                         <ul class="list-unstyled list-inline">
                                                             <li>
-                                                                <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on facebook" href="https://www.facebook.com/share.php?u=<?php the_permalink(); ?>&title=<?php echo get_post_meta($post->ID, 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                                                                <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on facebook" href="https://www.facebook.com/share.php?u=<?php the_permalink(); ?>&title=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on twitter" href="https://twitter.com/intent/tweet?status=<?php echo get_post_meta($post->ID, 'h1', true); ?>+<?php the_permalink(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                                                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on twitter" href="https://twitter.com/intent/tweet?status=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>+<?php the_permalink(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
                                                             </li>
                                                             <li>
                                                                 <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on whatsapp" href="https://api.whatsapp.com/send?text=<?php the_permalink(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-whatsapp"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php echo get_post_meta($post->ID, 'h1', true); ?>&source=علی رشیدنهال" rel="nofollow noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                                                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>&source=علی رشیدنهال" rel="nofollow noopener noreferrer"><i class="fa fa-linkedin"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on telegram" href="https://telegram.me/share/url?url=<?php the_permalink(); ?>&text=<?php echo get_post_meta($post->ID, 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-telegram"></i></a>
+                                                                <a target="_blank" data-toggle="tooltip" data-placement="bottom" title="share on telegram" href="https://telegram.me/share/url?url=<?php the_permalink(); ?>&text=<?php echo get_post_meta(get_the_ID(), 'h1', true); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-telegram"></i></a>
                                                             </li>
                                                             <li>
                                                                 <a target="_blank" data-toggle="tooltip" data-placement="top" title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php the_post_thumbnail_url(); ?>" rel="nofollow noopener noreferrer"><i class="fa fa-pinterest-p"></i></a>
@@ -90,7 +90,7 @@
                                         <div class="col-sm-12">
                                             <div class="post-content">
                                                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" target="_blank"><?php the_title('<h3 class="text-center">', '</h3>'); ?></a>
-                                                <p class="text-justify"><?php echo get_post_meta($post->ID, 'description', true);?></p>
+                                                <p class="text-justify"><?php echo get_post_meta(get_the_ID(), 'description', true);?></p>
                                                 <div class="preview">
                                                     <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-block" target="_blank" rel="bookmark">مشاهده مطلب</a>
                                                 </div>
