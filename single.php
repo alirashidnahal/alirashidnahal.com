@@ -55,7 +55,7 @@
                                         </li>
                                         <li class="date">
                                             <i class="fa fa-calendar"></i>
-		                                    <?php the_time('d F Y') ?>
+		                                    <?php the_time(get_option( 'date_format' )) ?>
                                         </li>
                                         <li class="postviews">
                                             <i class="fa fa-eye"></i>

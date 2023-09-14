@@ -11,9 +11,9 @@
                             <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemtype="https://schema.org/Thing" itemprop="item" href="<?php echo esc_url(home_url()); ?>" rel="bookmark"><span itemprop="name">صفحه اصلی</span></a><meta itemprop="position" content="1" /></li>
 	                        <?php if($post->post_parent){
 		                        $parent_link = get_permalink($post->post_parent); ?>
-                                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemtype="https://schema.org/Thing" itemprop="item" href="<?php echo $parent_link; ?>"><span itemprop="name"><?php echo get_the_title(wp_get_post_parent_id( $post_ID )); ?></span></a><meta itemprop="position" content="2" /></li>
-	                        <?php } ;?>
-                            <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemtype="https://schema.org/Thing" itemprop="item" href="<?php the_permalink() ?>"><span itemprop="name"><?php the_title(); ?></span></a><meta itemprop="position" content=" <?php if($post->post_parent){echo '3';} else{echo '2';};?>" /></li>
+                                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemtype="https://schema.org/Thing" itemprop="item" href="<?php echo $parent_link; ?>"><span itemprop="name"><?php echo get_the_title(wp_get_post_parent_id( get_the_ID() )); ?></span></a><meta itemprop="position" content="2" /></li>
+	                        <?php } ?>
+                            <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemtype="https://schema.org/Thing" itemprop="item" href="<?php the_permalink() ?>"><span itemprop="name"><?php the_title(); ?></span></a><meta itemprop="position" content=" <?php if($post->post_parent){echo '3';} else{echo '2';}?>" /></li>
                             <li class="small-menu pull-left">
                                 <ul class=" list-inline">
                                     <li>
@@ -48,7 +48,7 @@
                                         </li>
                                         <li class="date">
                                             <i class="fa fa-calendar"></i>
-		                                    <?php the_time('d F Y') ?>
+                                            <?php the_time(get_option( 'date_format' )) ?>
                                         </li>
                                         <li class="postviews">
                                             <i class="fa fa-eye"></i>
