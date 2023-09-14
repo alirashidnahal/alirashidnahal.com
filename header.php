@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> prefix="og: http://ogp.me/ns#">
+<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> prefix="og: https://ogp.me/ns">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -77,7 +77,8 @@
     </script>
 
 </head>
-<body data-spy="scroll" data-target="#navigation" class="classy-resume-home">
+<body data-spy="scroll" data-target="#navigation" <?php body_class( 'classy-resume-home' ); ?>>
+<?php wp_body_open(); ?>
 
 <!-- header -->
 <header id="header">
