@@ -32,7 +32,7 @@
 	<div id="respond">
 		<h3 class="postcomment"><?php comment_form_title( 'دیدگاه خود را بیان کنید', 'ارسال یک پاسخ به دیدگاه %s' ); ?></h3>
 		<div class="cancel-comment-reply"><small><?php cancel_comment_reply_link(); ?></small></div>
-		<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
+		<?php if ( get_option('comment_registration') && !get_the_ID() ) : ?>
 
 		<p>ابتدا <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">وارد شوید</a> تا بتوانید دیدگاهی ارسال کنید</p>
 

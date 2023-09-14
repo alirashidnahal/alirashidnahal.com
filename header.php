@@ -6,7 +6,6 @@
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="320"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
-    <title><?php if (is_home()) {echo bloginfo('name');} elseif (is_404()) {echo 'صفحه مورد نظر یافت نشد';} elseif (is_category()){echo wp_title( '' );} elseif (is_search()) {echo 'نتایج جستجوی شما';} elseif ( is_day() || is_month() || is_year() ) {echo 'آرشیو';wp_title( '' );} else {echo wp_title( '' );}?></title>
     <meta name="title" content="<?php if (is_home()) {echo bloginfo('name');} elseif (is_404()) {echo 'صفحه مورد نظر یافت نشد';} elseif (is_category()){echo wp_title( '' );} elseif (is_search()) {echo 'نتایج جستجوی شما';} elseif ( is_day() || is_month() || is_year() ) {echo 'آرشیو';wp_title( '' );} else {echo wp_title( '' );}?>">
     <meta name="language" content="fa" />
     <meta name="format-detection" content="telephone=yes" />
@@ -19,26 +18,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="copyright" content="<?php $copyYear = 2019; $curYear = date('Y'); echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');?>"/>
-    <meta name="keywords" content="<?php if ( is_home() ) {echo "علی رشیدنهال، برنامه نویس، طراح وب، طراحی سایت، ali rashidnahal";} else {echo get_post_meta($post->ID, 'keywords', true);} ?>"/>
-    <meta name="description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta($post->ID, 'description', true);} ?>"/>
-    <link rel="canonical" href="<?php if (is_home() ) {echo home_url();} else {echo the_permalink();} ?>"/>
-    <link rel="alternate" hreflang="fa-IR" href="<?php echo home_url();?>" />
-    <link rel="author" type="text/plain" href="<?php echo home_url();?>/humans.txt" />
-    <link rel="manifest" href="<?php echo home_url();?>/manifest.json">
+    <meta name="keywords" content="<?php if ( is_home() ) {echo "علی رشیدنهال، برنامه نویس، طراح وب، طراحی سایت، ali rashidnahal";} else {echo get_post_meta(get_the_ID(), 'keywords', true);} ?>"/>
+    <meta name="description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta(get_the_ID(), 'description', true);} ?>"/>
+    <link rel="canonical" href="<?php if (is_home() ) {echo esc_url(home_url( '/' ));} else {echo the_permalink();} ?>"/>
+    <link rel="alternate" hreflang="fa-IR" href="<?php echo esc_url(home_url( '/' ));?>" />
+    <link rel="author" type="text/plain" href="<?php echo esc_url(home_url( '/' ));?>/humans.txt" />
+    <link rel="manifest" href="<?php echo esc_url(home_url( '/' ));?>/manifest.json">
     <meta name="robots" content="all" />
     <base href="/">
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="<?php if (is_home()) {echo bloginfo('name');} elseif (is_404()) {echo 'صفحه مورد نظر یافت نشد';} elseif (is_category()){echo wp_title( '' );} elseif (is_search()) {echo 'نتایج جستجوی شما';} elseif ( is_day() || is_month() || is_year() ) {echo 'آرشیو';wp_title( '' );} else {echo wp_title( '' );}?>">
-    <meta itemprop="description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta($post->ID, 'description', true);} ?>">
-    <meta itemprop="image" content="<?php if ( is_home() ) {echo '' . get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} elseif ( has_post_thumbnail() ) {the_post_thumbnail_url();} else { echo '' . get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} ?>">
+    <meta itemprop="description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta(get_the_ID(), 'description', true);} ?>">
+    <meta itemprop="image" content="<?php if ( is_home() ) {echo get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} elseif ( has_post_thumbnail() ) {the_post_thumbnail_url();} else { echo get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} ?>">
     <!-- Open Graph meta tags -->
     <meta property="og:locale" content="fa_IR"/>
     <meta property="og:type" content="<?php if (is_single()) {echo "article";} else {echo "website";} ?>"/>
-    <meta property="og:url" content="<?php if ( is_home() ) {echo home_url();} else {echo the_permalink();} ?>"/>
+    <meta property="og:url" content="<?php if ( is_home() ) {echo esc_url(home_url( '/' ));} else {echo the_permalink();} ?>"/>
     <meta property="og:site_name" content="<?php echo bloginfo('name');?>"/>
     <meta property="og:title" content="<?php if ( is_home() ) {echo bloginfo('name');} elseif ( is_category() ) { echo ''; wp_title( '' );} elseif ( is_day() || is_month() || is_year() ) {echo 'آرشیو'; wp_title( '' );} else {echo wp_title(); } ?>"/>
-    <meta property="og:description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta($post->ID, 'description', true);} ?>"/>
-    <meta property="og:image" content="<?php if ( is_home() ) {echo '' . get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} elseif ( has_post_thumbnail() ) {the_post_thumbnail_url();} else { echo '' . get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} ?>" />
+    <meta property="og:description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta(get_the_ID(), 'description', true);} ?>"/>
+    <meta property="og:image" content="<?php if ( is_home() ) {echo get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} elseif ( has_post_thumbnail() ) {the_post_thumbnail_url();} else { echo get_stylesheet_directory_uri() . '/assets/images/alirashidnahal-logo.jpg';} ?>" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1782">
     <meta property="og:image:height" content="1254">
@@ -46,9 +45,9 @@
     <!-- twitter card meta tags -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@alirashidnahal"/>
-    <meta name="twitter:url" content="<?php echo home_url();?>">
+    <meta name="twitter:url" content="<?php echo esc_url(home_url( '/' ));?>">
     <meta name="twitter:creator" content="Ali Rashidnahal"/>
-    <meta name="twitter:description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta($post->ID, 'description', true);} ?>"/>
+    <meta name="twitter:description" content="<?php if ( is_home() ) {echo bloginfo('description');} else {echo get_post_meta(get_the_ID(), 'description', true);} ?>"/>
     <meta name="twitter:title" content="<?php if ( is_home() ) {echo bloginfo('name');} elseif ( is_category() ) { echo ''; wp_title( '' );} elseif ( is_day() || is_month() || is_year() ) {echo 'آرشیو'; wp_title( '' );} else {echo wp_title( '' ); } ?>"/>
     <meta name="twitter:image" content="<?php if (is_home()) {echo bloginfo('name');} elseif (is_404()) {echo 'صفحه مورد نظر یافت نشد';} elseif (is_category()){echo wp_title( '' );} elseif (is_search()) {echo 'نتایج جستجوی شما';} elseif ( is_day() || is_month() || is_year() ) {echo 'آرشیو';wp_title( '' );} else {echo wp_title( '' );}?>" />
     <meta name="twitter:image:width" content="1782">
@@ -67,22 +66,15 @@
 
 	<?php wp_head(); ?>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
-    <![endif]-->
-    
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S4T75K33HV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4T75K33HV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-S4T75K33HV');
-</script>
+        gtag('config', 'G-S4T75K33HV');
+    </script>
 
 </head>
 <body data-spy="scroll" data-target="#navigation" class="classy-resume-home">
